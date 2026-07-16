@@ -35,7 +35,11 @@ def init_db():
 def save_analysis(persona, ph, turbidity, tds, season, risk_score, risk_level):
     with get_db_connection() as conn:
         cursor = conn.cursor()
-        now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        # Convert UTC to IST (+5:30) for correct timezone display on cloud hosting
+        from datetime import timezone, timedelta
+        utc_now = datetime.now(timezone.utc)
+        ist_now = utc_now + timedelta(hours=5, minutes=30)
+        now_str = ist_now.strftime("%Y-%m-%d %H:%M:%S")
         cursor.execute("""
             INSERT INTO water_history (timestamp, persona, ph, turbidity, tds, season, risk_score, risk_level)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)
