@@ -7,7 +7,7 @@ AquaGuard AI is a lightweight, rule-based, and highly explainable Streamlit web 
 ---
 
 ## 🔗 Live Application
-🌐 **[Launch AquaGuard AI on Streamlit Cloud](https://aquaguard-xpzfxc7glhr8otmkgugewv.streamlit.web.app/)** 
+🌐 **[Launch AquaGuard AI on Streamlit Cloud](https://aquaguard-xpzfxc7glhr8otmkgugewv.streamlit.app/)** 
 *(Note: Replace with your actual live link if you customize the URL, but the default linked above matches your deployed instance!)*
 
 ---
